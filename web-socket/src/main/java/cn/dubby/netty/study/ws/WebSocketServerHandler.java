@@ -84,10 +84,7 @@ public class WebSocketServerHandler extends SimpleChannelInboundHandler<Object> 
             System.out.println(ctx.name() + "\t" + ((TextWebSocketFrame) frame).text());
 
             //广播给所有客户端
-            for (Channel channel : channels) {
-                channel.writeAndFlush(new TextWebSocketFrame(((TextWebSocketFrame) frame).text()));
-            }
-
+            channels.writeAndFlush(new TextWebSocketFrame(((TextWebSocketFrame) frame).text()));
             return;
         }
         if (frame instanceof BinaryWebSocketFrame) {
