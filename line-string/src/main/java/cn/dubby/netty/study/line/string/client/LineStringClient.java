@@ -16,7 +16,7 @@ public class LineStringClient {
                     .channel(NioSocketChannel.class)
                     .handler(new LineStringInitializer());
 
-            Channel ch = b.connect("127.0.0.1", 8080).sync().channel();
+            Channel ch = b.connect("127.0.0.1", 8888).sync().channel();
 
             ch.closeFuture().sync();
         } finally {
