@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>line-string</artifactId>
+    <artifactId>line-based</artifactId>
 
 
 </project>
