@@ -11,6 +11,7 @@
     <modules>
         <module>web-socket</module>
         <module>line-based</module>
+        <module>delimiter-based</module>
     </modules>
 
     <dependencies>
